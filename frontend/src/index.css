@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss";
+
 :root{
   --container: 980px;
   --accent: #2563eb;

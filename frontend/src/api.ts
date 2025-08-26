@@ -22,3 +22,13 @@ export async function createJob(payload: { title: string; description: string; r
   const resp = await API.post("/jobs/", payload);
   return resp.data;
 }
+
+export async function deleteJob(jobId: number) {
+  const resp = await API.delete(`/jobs/${jobId}`);
+  return resp.data;
+}
+
+export async function getApplicationsForJob(jobId: number) {
+  const resp = await API.get(`/applications/job/${jobId}`);
+  return resp.data;
+}
